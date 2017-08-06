@@ -4,10 +4,7 @@ This container has been specifically designed to support Laravel 5 applications.
 [https://hub.docker.com/r/ikaruwa/lamp_base/](https://hub.docker.com/r/ikaruwa/lamp_base/)
 
 -----
-### Building the Development Docker Image
-For development purposes, FFTCGDB can be deployed into a Docker container. The final container image is built on top of a LAMP base layer designed to support Laravel 5.3.
 #### Building the LAMP Base Layer
-The FFTCGDB repository contains two Docker build files. The LAMP base layer is referenced by the application layer, and is built using the following Docker command:
 
 > `docker build -t lamp_base:latest -f lamp_base.docker .`
 
