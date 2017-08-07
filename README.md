@@ -1,6 +1,6 @@
 # LAMP Base Docker Container
 
-This container has been specifically designed to support Laravel 5 applications. It's tracked publically on docker.com at
+This container has been specifically designed to support Laravel 5 applications. It's tracked publicly on docker.com at
 [https://hub.docker.com/r/ikaruwa/lamp_base/](https://hub.docker.com/r/ikaruwa/lamp_base/)
 
 -----
