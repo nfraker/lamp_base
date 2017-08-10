@@ -1,5 +1,13 @@
 FROM ubuntu:latest
-MAINTAINER Nick Fraker <nickdontspam@gmail.com>
+LABEL name="lamp_base"
+LABEL version="1.0.0"
+LABEL release="0"
+LABEL architecture="Ubuntu 16.04 x86_64"
+LABEL vendor="Nick Fraker <nickdontspam@gmail.com>"
+LABEL vcs-type="git"
+LABEL vcs-url="https://github.com/nfraker/lamp_base"
+LABEL authoritative-source-url="https://hub.docker.com/r/ikaruwa/lamp_base"
+LABEL distribution-scope="public"
 
 # Setup environment
 EXPOSE 80 443
