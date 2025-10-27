@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:24.04
 LABEL name="lamp_base"
-LABEL version="1.0.0"
+LABEL version="2.0.0"
 LABEL release="0"
-LABEL architecture="Ubuntu 16.04 x86_64"
+LABEL architecture="Ubuntu 24.04 x86_64"
 LABEL vendor="Nick Fraker <nickdontspam@gmail.com>"
 LABEL vcs-type="git"
 LABEL vcs-url="https://github.com/nfraker/lamp_base"
@@ -21,19 +21,19 @@ RUN add-apt-repository ppa:ondrej/php -y
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y apache2 \
                   				      libapache2-mod-php5.6 \
-                   				      php5.6 \
-                   				      php5.6-mcrypt \
-                   				      php5.6-mysql \
-                   			              php5.6-gd \
-                   				      php5.6-curl \
-                   				      php5.6-dev \
-                   				      php5.6-memcache \
-                   				      php5.6-pspell \
-                   				      php5.6-snmp \
-                   				      php5.6-mbstring \
-                   				      php5.6-dom \
-                   				      php5.6-xmlrpc \
-                  	 			      php5.6-cli \
+                   				      php7.3 \
+                   				      php7.3-mcrypt \
+                   				      php7.3-mysql \
+                   			              php7.3-gd \
+                   				      php7.3-curl \
+                   				      php7.3-dev \
+                   				      php7.3-memcache \
+                   				      php7.3-pspell \
+                   				      php7.3-snmp \
+                   				      php7.3-mbstring \
+                   				      php7.3-dom \
+                   				      php7.3-xmlrpc \
+                  	 			      php7.3-cli \
                    			              snmp \
                    				      vim \
                    				      bash-completion \
@@ -55,11 +55,6 @@ RUN echo "service networking start && find /var/lib/mysql -type f -exec touch {}
     chmod +x /startup.sh &&\
     mkdir -p /var/lock/apache2 /var/run/apache2 /var/log/apache2 && \
     chown -R www-data:www-data /var/lock/apache2 /var/run/apache2 /var/log/apache2
-
-# Force resolv.conf
-RUN echo "nameserver 172.17.0.1" > /etc/resolv.conf &&\
-    echo "nameserver 8.8.8.8" >> /etc/resolv.conf &&\
-    echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 # Fix some problematic MySQL configs
 RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/mysql.conf.d/mysqld.cnf && \
