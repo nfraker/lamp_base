@@ -2,6 +2,10 @@
 
 Welcome to the `lamp_base` codebase. This document serves as a critical overview of the container's architecture and purpose.
 
+## Project Tracking
+Development effort across the workspace (including `GTCGDB` and `godzillatcgdb`) is tracked in this public GitHub Project:
+https://github.com/users/nfraker/projects/1
+
 **Always read this document before attempting to modify the Docker configuration.**
 
 ## Tech Stack
