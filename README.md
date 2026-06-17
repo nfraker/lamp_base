@@ -1,3 +1,4 @@
+[![Publish Docker Image](https://github.com/nfraker/lamp_base/actions/workflows/docker-publish.yml/badge.svg?branch=main)](https://github.com/nfraker/lamp_base/actions/workflows/docker-publish.yml)
 # lamp_base - A Modern LAMP Docker Base Image
 This is a generalized, all-in-one Docker image designed to support modern PHP applications (like Laravel 13+) that require a classic LAMP (Linux, Apache, MariaDB, PHP) stack.
 
