@@ -32,9 +32,9 @@ jobs:
         with:
           images: ikaruwa/lamp_base
           tags: |
-            type=raw,value=latest,enable={{is_default_branch}}
-            type=raw,value=laravel-13,enable={{is_default_branch}}
-            type=raw,value=laravel-13.5.0,enable={{is_default_branch}}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
+            type=raw,value=laravel-13,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
+            type=raw,value=laravel-13.5.0,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
